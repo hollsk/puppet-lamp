@@ -1,0 +1,27 @@
+[submodule "puppet/modules/apache"]
+	path = puppet/modules/apache
+	url = http://github.com/puppetlabs/puppetlabs-apache.git
+[submodule "puppet/modules/mysql"]
+	path = puppet/modules/mysql
+	url = http://github.com/puppetlabs/puppetlabs-mysql.git
+[submodule "puppet/modules/php"]
+	path = puppet/modules/php
+	url = http://github.com/example42/puppet-php.git
+[submodule "puppet/modules/stdlib"]
+	path = puppet/modules/stdlib
+	url = http://github.com/puppetlabs/puppetlabs-stdlib.git
+[submodule "puppet/modules/concat"]
+	path = puppet/modules/concat
+	url = https://github.com/puppetlabs/puppetlabs-concat.git
+[submodule "puppet/modules/file_concat"]
+	path = puppet/modules/file_concat
+	url = https://github.com/electrical/puppet-lib-file_concat.git
+[submodule "puppet/modules/puppi"]
+	path = puppet/modules/puppi
+	url = http://github.com/example42/puppi.git
+[submodule "puppet/modules/mongodb"]
+	path = puppet/modules/mongodb
+	url = http://github.com/puppetlabs/puppetlabs-mongodb.git
+[submodule "puppet/modules/nodejs"]
+	path = puppet/modules/nodejs
+	url = http://github.com/puppetlabs/puppetlabs-nodejs.git
