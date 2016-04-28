@@ -35,7 +35,7 @@ class { 'apache::mod::vhost_alias': }
 
 # PHP setup
 include php
-php::module { ['xdebug', 'pgsql', 'curl', 'gd', 'cli', 'intl', 'mcrypt', 'cgi', 'imagick', 'mysql', 'mysqlnd','xsl'] : 
+php::module { ['xdebug', 'curl', 'gd', 'mcrypt', 'cgi', 'imagick', 'mysql', 'mysqlnd','xsl'] : 
     notify => [ Service['httpd'], ],
 }
 #php::pecl::module { 'pecl_http': }
@@ -54,7 +54,6 @@ file { '/etc/php5/apache2/conf.d/20-mcrypt.ini':
 include '::mysql::client'
 class { '::mysql::server':
     root_password    => 'root',
-    remove_default_accounts => true,
     override_options => {
         'mysqld' => {
             'max_connections'   => '1024',
@@ -84,6 +83,13 @@ class { '::mysql::server':
             privileges => ['ALL'],
             table      => '*.*',
             user       => 'prefix_user@%',
+        },
+        'prefix_user@localhost/*.*' => {
+            ensure     => 'present',
+            options    => ['GRANT'],
+            privileges => ['ALL'],
+            table      => '*.*',
+            user       => 'prefix_user@localhost',
         },
     },    
 }
