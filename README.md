@@ -39,7 +39,6 @@ git submodule add http://github.com/example42/puppet-php.git puppet/modules/php
 # other useful stuff
 git submodule add http://github.com/puppetlabs/puppetlabs-mongodb.git puppet/modules/mongodb
 git submodule add http://github.com/puppetlabs/puppetlabs-nodejs.git puppet/modules/nodejs
-git@github.com:
 ```
 - Edit `puppet/manifests/lamp.pp` to do the important things it has to do. NB: this is the hard bit.
 - `vagrant provision`
