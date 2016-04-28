@@ -12,6 +12,9 @@ Uses name-based virtual hosts with wildcard directories, so you can map `http://
 
 You will need to update your MYSQL config in the manifest to use your actual database configurations. TODO: come up with a sensible way of managing this, e.g. [hiera-eyaml][eyaml]
 
+Trusty is at the end of its support life so package dependencies have started to fail, notably PHP5. Run `sudo apt-get update` and then `sudo apt-get install php5-dev` from inside the box if this happens.
+
+TODO: upgrade to Xenial at some point (doesn't work well right now).
 
 My memory is THE WORST, so I wrote down the steps what I took to build this box originally
 -----
