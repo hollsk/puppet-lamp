@@ -23,6 +23,9 @@ Vagrant.configure(2) do |config|
   # argument is a set of non-required options.
   config.vm.synced_folder "~/Dev/websites", "/var/www", id: "vagrant-root", owner: "www-data", group: "www-data", :nfs => false
 
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 1024
+  end  
 
   # Enable Puppet
   config.vm.provision :puppet do |puppet|
